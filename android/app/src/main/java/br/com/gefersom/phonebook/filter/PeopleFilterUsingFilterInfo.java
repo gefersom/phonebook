@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.gefersom.phonebook.model.FilterInfo;
-import br.com.gefersom.phonebook.model.FilterInfoDictionaty;
+import br.com.gefersom.phonebook.model.FilterInfoDictionary;
 import br.com.gefersom.phonebook.model.Person;
 
 /**
@@ -23,7 +23,7 @@ public class PeopleFilterUsingFilterInfo {
 
     public List<Person> filter(List<Person> peopleToFilter) {
 
-        FilterInfoDictionaty filterInfoDictionaty = FilterInfoDictionaty.getInstance();
+        FilterInfoDictionary filterInfoDictionary = FilterInfoDictionary.getInstance();
 
         List<Person> list = new ArrayList<>();
         for (int i = 0; i < peopleToFilter.size(); ++i) {
@@ -32,19 +32,19 @@ public class PeopleFilterUsingFilterInfo {
             boolean passed = true;
 
             //Job
-            String value = filterInfoDictionaty.getJobFilter().getValue().toLowerCase();
+            String value = filterInfoDictionary.getJobFilter().getValue().toLowerCase();
             passed = passed && person.getJob().toLowerCase().contains(value);
 
             //Adress
-            value = filterInfoDictionaty.getAddressFilter().getValue().toLowerCase();
+            value = filterInfoDictionary.getAddressFilter().getValue().toLowerCase();
             passed = passed && person.getAddress().toLowerCase().contains(value);
 
             //group
-            value = filterInfoDictionaty.getGroupFilter().getValue().toLowerCase();
+            value = filterInfoDictionary.getGroupFilter().getValue().toLowerCase();
             passed = passed && person.getGroup().toLowerCase().contains(value);
 
             // Blood Type
-            passed = passed && contains(person.getBloodType(), filterInfoDictionaty.getBloodTypeFilter());
+            passed = passed && contains(person.getBloodType(), filterInfoDictionary.getBloodTypeFilter());
 
             if (passed) {
                 list.add(person);

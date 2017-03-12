@@ -17,7 +17,7 @@ import java.util.Map;
 
 import br.com.gefersom.phonebook.R;
 import br.com.gefersom.phonebook.model.FilterInfo;
-import br.com.gefersom.phonebook.model.FilterInfoDictionaty;
+import br.com.gefersom.phonebook.model.FilterInfoDictionary;
 
 /**
  * Created by me on 24/9/2016.
@@ -36,12 +36,12 @@ public class FilterAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return FilterInfoDictionaty.getInstance().getSize();
+        return FilterInfoDictionary.getInstance().getSize();
     }
 
     @Override
     public FilterInfo getItem(int i) {
-        return FilterInfoDictionaty.getInstance().getFilterInfo(i);
+        return FilterInfoDictionary.getInstance().getFilterInfo(i);
     }
 
     @Override

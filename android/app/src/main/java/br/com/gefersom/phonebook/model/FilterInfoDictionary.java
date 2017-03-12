@@ -12,7 +12,7 @@ import br.com.gefersom.phonebook.R;
  * Created by me on 24/9/2016.
  */
 
-public class FilterInfoDictionaty {
+public class FilterInfoDictionary {
 
     private FilterInfo bloodTypeFilter;
     private FilterInfo addressFilter;
@@ -20,18 +20,18 @@ public class FilterInfoDictionaty {
     private FilterInfo jobFilter;
     private List<FilterInfo> filterInfoList;
     private Map<String, FilterInfo> map;
-    private static FilterInfoDictionaty instance = null;
+    private static FilterInfoDictionary instance = null;
 
 
-    static public FilterInfoDictionaty getInstance(){
+    static public FilterInfoDictionary getInstance(){
         if ( instance == null ){
-            instance = new FilterInfoDictionaty();
+            instance = new FilterInfoDictionary();
         }
 
         return instance;
     }
 
-    private FilterInfoDictionaty(){
+    private FilterInfoDictionary(){
         this.filterInfoList = new ArrayList<>();
 
         this.addressFilter  = new FilterInfo(R.drawable.ic_place_black_24dp,  "Endereço", "");

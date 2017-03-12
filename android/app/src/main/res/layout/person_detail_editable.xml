@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:mainActivity=".person.PersonDetailActivity"
+    android:id="@+id/scrool_view">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_100"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:id="@+id/image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_group_black_48dp" />
+
+            <LinearLayout
+                android:id="@+id/camera_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_48"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black_alpha"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|right">
+
+                <ImageButton
+                    android:id="@+id/camera"
+                    android:layout_width="wrap_content"
+                    android:padding="@dimen/size_18"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_camera_alt_white_24dp"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_infos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_layout"
+            android:layout_marginTop="@dimen/size_8"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/size_16"
+            android:paddingLeft="@dimen/size_16"
+            android:paddingRight="@dimen/size_16"
+            android:paddingTop="@dimen/size_6">
+
+
+            <!-- NAME -->
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:paddingRight="@dimen/size_8"
+                    android:paddingTop="@dimen/size_12"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nome"
+                    android:textColorHint="@color/grey_300">
+
+                    <EditText
+                        android:id="@+id/person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textAutoComplete|textAutoCorrect"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:maxLines="@integer/max_lines_1"
+                        android:textSize="@dimen/font_18" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <!-- PHONE -->
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:paddingRight="@dimen/size_8"
+                    android:paddingTop="@dimen/size_12"
+                    android:src="@drawable/ic_call_black_24dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Telefone"
+                    android:textColorHint="@color/grey_300">
+
+                    <EditText
+                        android:id="@+id/phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="phone"
+                        android:layout_centerVertical="true"
+                        android:maxLines="@integer/max_lines_1"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_18" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <!-- EMAIL -->
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/email_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:paddingTop="@dimen/size_12"
+                    android:paddingRight="@dimen/size_8"
+                    android:src="@drawable/ic_mail_black_24dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Email"
+                        android:textColorHint="@color/grey_300">
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="@integer/max_lines_1"
+                        android:layout_centerVertical="true"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_18" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- ADDRESS -->
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/address_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:paddingTop="@dimen/size_12"
+                    android:paddingRight="@dimen/size_8"
+                    android:src="@drawable/ic_place_black_24dp" />
+
+                   <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       android:hint="Endereço"
+                        android:textColorHint="@color/grey_300">
+
+                    <EditText
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPostalAddress"
+                        android:maxLines="@integer/max_lines_1"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_18" />
+
+                    </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <!-- JOG -->
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/job_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:paddingTop="@dimen/size_12"
+                    android:paddingRight="@dimen/size_8"
+                    android:src="@drawable/ic_job_black_24dp" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Profissão"
+                        android:textColorHint="@color/grey_300">
+
+                        <EditText
+                            android:id="@+id/job"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:inputType="textAutoComplete|textAutoCorrect"
+                            android:maxLines="@integer/max_lines_1"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/font_18" />
+                    </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <!-- BIRTHDAY -->
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12">
+
+                <ImageView
+                    android:id="@+id/birthday_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:paddingTop="@dimen/size_12"
+                    android:paddingRight="@dimen/size_8"
+                    android:src="@drawable/ic_cake_black_24dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Aniversário"
+                    android:textColorHint="@color/grey_300">
+
+                    <EditText
+                        android:id="@+id/birthday"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:maxLines="@integer/max_lines_1"
+                        android:inputType="date"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_18" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <!-- COMPANY -->
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12">
+
+                <ImageView
+                    android:id="@+id/company_icon"
+                    android:layout_width="@dimen/size_32"
+                    android:layout_height="@dimen/size_32"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:paddingTop="@dimen/size_12"
+                    android:paddingRight="@dimen/size_8"
+                    android:src="@drawable/ic_domain_black_36dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Empresa"
+                    android:textColorHint="@color/grey_300">
+
+                    <EditText
+                        android:id="@+id/company"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:inputType="textAutoComplete|textAutoCorrect"
+                        android:maxLines="@integer/max_lines_1"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_18" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <!-- GROUP -->
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12">
+
+                <ImageView
+                    android:id="@+id/group_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:paddingTop="@dimen/size_12"
+                    android:paddingRight="@dimen/size_8"
+                    android:src="@drawable/ic_group_black_24dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Grupo"
+                    android:textColorHint="@color/grey_300">
+
+                    <EditText
+                        android:id="@+id/group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:inputType="textAutoComplete|textAutoCorrect"
+                        android:maxLines="@integer/max_lines_1"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_18" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <!-- CHURCH -->
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/size_12">
+
+                <ImageView
+                    android:id="@+id/church_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:paddingTop="@dimen/size_12"
+                    android:paddingRight="@dimen/size_8"
+                    android:src="@drawable/ic_church_black_24dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Igreja"
+                    android:textColorHint="@color/grey_300">
+
+                    <EditText
+                        android:id="@+id/church"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="@integer/max_lines_1"
+                        android:inputType="textAutoComplete|textAutoCorrect"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_18" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <!-- CHURCH -->
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/size_12">
+
+                <ImageView
+                    android:id="@+id/blood_bag_icon"
+                    android:layout_width="@dimen/size_32"
+                    android:layout_height="@dimen/size_32"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:paddingTop="@dimen/size_12"
+                    android:paddingRight="@dimen/size_8"
+                    android:src="@drawable/ic_blood_bag_24dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/blood_type_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="Tipo sanguineo"
+                    android:textColorHint="@color/grey_300">
+
+                    <EditText
+                        android:id="@+id/blood_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:inputType="textAutoComplete|textAutoCorrect"
+                        android:maxLines="@integer/max_lines_1"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_18" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

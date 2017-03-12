@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:mainActivity="br.com.gefersom.MainActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_include" />
+
+    <LinearLayout
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:mainActivity="br.com.gefersom.phonebook.MainActivity"
+        android:focusableInTouchMode="true"
+        android:background="@color/grey_100" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:gravity="center_vertical"
+            android:id="@+id/filter_layout">
+
+            <TextView
+                android:id="@+id/filter"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="Filtro ativado"
+                android:padding="@dimen/size_8"
+                android:gravity="center"
+                android:textSize="@dimen/font_24"/>
+
+            <View
+                android:layout_width="@dimen/size_1"
+                android:background="@color/colorPrimary"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/ac_edit_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_mode_edit_white_24dp"
+                android:padding="@dimen/size_12"
+                android:background="@android:color/transparent"/>
+
+            <View
+                android:layout_width="@dimen/size_1"
+                android:background="@color/colorPrimary"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/ac_remove_filter"
+                android:layout_width="@dimen/size_32"
+                android:layout_height="@dimen/size_32"
+                android:src="@drawable/ic_clear_white_36dp"
+                android:padding="@dimen/size_16"
+                android:layout_marginLeft="@dimen/size_8"
+                android:layout_marginRight="@dimen/size_8"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            android:theme="@style/MyActionBarWidgetTheme"
+            app:queryHint="Digite um nome para procurar"
+            android:layout_margin="0dp"
+            android:background="@android:color/white"/>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/size_8"
+            android:background="@android:color/white"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

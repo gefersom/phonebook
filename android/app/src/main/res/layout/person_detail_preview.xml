@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:mainActivity=".person.PersonDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_100">
+
+        <RelativeLayout
+            android:id="@+id/image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_group_black_48dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_infos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_layout"
+            android:layout_marginTop="@dimen/size_8"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/size_16"
+            android:paddingRight="@dimen/size_16"
+            android:paddingBottom="@dimen/size_16"
+            android:paddingTop="@dimen/size_6">
+
+
+
+            <!-- PHONE -->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:paddingTop="@dimen/size_12">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:paddingRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_call_black_24dp"
+                    android:id="@+id/imageView2" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/phone_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/font_18"
+                        android:hint="(21) 95464-6864"
+                        android:textColorHint="@color/grey_300"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey_400"
+                        android:layout_marginTop="@dimen/size_16"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+            <!-- EMAIL -->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:paddingTop="@dimen/size_12">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:paddingRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_mail_black_24dp"
+                    android:id="@+id/email_icon" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/email_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/font_18"
+                        android:hint="exemplo@ibji.org.com.br"
+                        android:textColorHint="@color/grey_300"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey_400"
+                        android:layout_marginTop="@dimen/size_16"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+
+            <!-- ADDRESS -->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:paddingTop="@dimen/size_12">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:paddingRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_place_black_24dp"
+                    android:id="@+id/address_icon" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/address_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/font_18"
+                        android:hint="Rua Dr. Paulo Cézar, 87, Niterói"
+                        android:textColorHint="@color/grey_300"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey_400"
+                        android:layout_marginTop="@dimen/size_16"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+
+            <!-- JOG -->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:paddingTop="@dimen/size_12">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:paddingRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_job_black_24dp"
+                    android:id="@+id/job_icon" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/job_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/job"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/font_18"
+                        android:hint="Profissão"
+                        android:textColorHint="@color/grey_300"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey_400"
+                        android:layout_marginTop="@dimen/size_16"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+            <!-- BIRTHDAY -->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:paddingTop="@dimen/size_12">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:paddingRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_cake_black_24dp"
+                    android:id="@+id/birthday_icon" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/birthday_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/font_18"
+                        android:hint="25/12/2016"
+                        android:textColorHint="@color/grey_300"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey_400"
+                        android:layout_marginTop="@dimen/size_16"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+
+
+
+            <!-- COMPANY -->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:paddingTop="@dimen/size_12">
+
+                <ImageView
+                    android:layout_width="@dimen/size_32"
+                    android:layout_height="@dimen/size_32"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:paddingRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_domain_black_36dp"
+                    android:id="@+id/company_icon" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/company_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/font_18"
+                        android:hint="IBJI Corp"
+                        android:textColorHint="@color/grey_300"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey_400"
+                        android:layout_marginTop="@dimen/size_16"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+
+
+
+            <!-- GROUP -->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:paddingTop="@dimen/size_12">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:paddingRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_group_black_24dp"
+                    android:id="@+id/group_icon" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/group_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/font_18"
+                        android:hint="CTL"
+                        android:textColorHint="@color/grey_300"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey_400"
+                        android:layout_marginTop="@dimen/size_16"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+
+            <!-- CHURCH -->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:paddingTop="@dimen/size_12">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:paddingRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_church_black_24dp"
+                    android:id="@+id/church_icon" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/church_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/church"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/font_18"
+                        android:hint="Igreja Batista Jardim Ícarai"
+                        android:textColorHint="@color/grey_300"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey_400"
+                        android:layout_marginTop="@dimen/size_16"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- CHURCH -->
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size_12"
+                android:paddingTop="@dimen/size_12">
+
+                <ImageView
+                    android:layout_width="@dimen/size_32"
+                    android:layout_height="@dimen/size_32"
+                    android:layout_marginRight="@dimen/size_8"
+                    android:paddingRight="@dimen/size_8"
+                    android:alpha="0.5"
+                    android:src="@drawable/ic_blood_bag_24dp"
+                    android:id="@+id/blood_bag_icon" />
+
+                <LinearLayout
+                    android:layout_toRightOf="@id/blood_bag_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/blood_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/font_18"
+                        android:hint="O+"
+                        android:textColorHint="@color/grey_300"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_1"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/grey_400"
+                        android:layout_marginTop="@dimen/size_16"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
